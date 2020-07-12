@@ -9,24 +9,22 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
-    <header>
-        <div class="ui menu">
-            <div class="ui container">
-                <a class='item' asp-page='Weather'>testing</a>
-                <div class="right menu">
-                    <a class="item" asp-page='login'>Login</a>
-                    <a class="item" asp-page='register'>Register</a>
-                </div>
+    <div class="ui menu">
+        <div class="ui container">
+            <a class='item' asp-page='Weather'>testing</a>
+            <div class="right menu">
+                <a class="item" asp-page='login'>Login</a>
+                <a class="item" asp-page='register'>Register</a>
             </div>
         </div>
-    </header>
+    </div>
     <div class="ui container">
         @RenderBody()
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - WeatherBoy - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="footer text-muted">
+        <div class="ui container">
+            <div class="ui padded header"> Base ASP.NET Core 5 w/ Blazor Pages Client side. (Not complex enough to warrant React) Made by Lamar Daughma &copy Weather Boy</div>
         </div>
     </footer>
 
