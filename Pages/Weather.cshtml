@@ -1,0 +1,27 @@
+@page
+@model WeatherModel
+@{
+    ViewData["Title"]="Weather";
+}
+
+<div class="ui segment">
+    <div class="ui header">Forecast</div>
+    <div class="ui centered cards">
+    @{foreach(var i in Model.APIResult.consolidated_weather){
+        string imgString = string.Format("https://www.metaweather.com/static/img/weather/png/{0}.png", i.weather_state_abbr);
+        <div class='fluid card'>
+            <div class="content">
+                <img class="right floated mini ui image" src="@imgString" alt="">
+                <div class="header">@i.applicable_date.DayOfWeek.ToString()</div>
+                <div class="meta">@i.applicable_date.ToShortDateString()</div>
+                <div class="description">
+                    @string.Format("Tempreature will be between: {0}°C and {1}°C", i.min_temp, i.max_temp)
+                </div>
+            </div>
+            <div class="extra content">
+                @string.Format("Weather conditions: {0} with humidity around {1}%", i.weather_state_name, i.humidity)
+            </div>
+        </div>
+    }}
+    </div>
+</div>
