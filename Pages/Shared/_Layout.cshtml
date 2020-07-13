@@ -11,10 +11,9 @@
 <body>
     <div class="ui menu">
         <div class="ui container">
-            <a class='item' asp-page='Weather'>testing</a>
+            <a class='item' asp-page='index'>Home</a>
             <div class="right menu">
                 <a class="item" asp-page='login'>Login</a>
-                <a class="item" asp-page='register'>Register</a>
             </div>
         </div>
     </div>
@@ -24,12 +23,11 @@
 
     <footer class="footer text-muted">
         <div class="ui container">
-            <div class="ui padded header"> Base ASP.NET Core 5 w/ Blazor Pages Client side. (Not complex enough to warrant React) Made by Lamar Daughma &copy Weather Boy</div>
+            <div class="ui padded header"> Base ASP.NET Core 3 w/ Blazor Pages Client side. (Not complex enough to warrant React) Made by Lamar Daughma &copy Weather Boy</div>
         </div>
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)

@@ -6,15 +6,16 @@
 
 
 <div class="ui segment">
-    <div class="ui form">
-        <div class="field">
+    <div class="ui header">Login </div>
+    <form class="ui form" method="POST">
+        <div class="field" asp-for>
             <label>Username</label>
-            <input type="text" name="Username" id="Username">
+            <input  type="text" name="Username" id="Username" asp-for="Login.Username">
         </div>
         <div class="field">
             <label>Password</label>
-            <input type="password" name="Username" id="Username">
+            <input type="password" name="Password" id="Password" asp-for="Login.Password">
         </div>
-        <button class="ui button">Login</button>
-    </div>
+        <button class="ui button" type="submit">Login</button>
+    </form>
 </div>
